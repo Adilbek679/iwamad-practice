@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adilbek — Dev Environment & HTML Template</title>
+  <meta name="description" content="Personal profile page for IWaMAD Week 01: development environment setup and a semantic HTML5 template.">
+</head>
+<body>
+
+  <header>
+    <img src="https://picsum.photos/100/100" alt="My avatar placeholder photo" width="100" height="100">
+    <h1>Adilbek</h1>
+    <p>Aspiring Web Developer</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a> |
+    <a href="#skills">Skills</a> |
+    <a href="#goals">Goals</a> |
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        I'm a student with a background in cloud infrastructure (AWS), backend
+        development (Django REST Framework), and networking (Cisco). This week
+        I set up my local dev environment and built this page to practise
+        plain, semantic HTML — no CSS framework and no JavaScript yet.
+      </p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>Cloud infrastructure (AWS)</li>
+        <li>Backend APIs with Django REST Framework</li>
+        <li>Networking basics (Cisco routing and subnetting)</li>
+        <li>Data analysis with pandas</li>
+        <li>HTML5 semantics (this week's focus)</li>
+      </ul>
+    </section>
+
+    <section id="goals">
+      <h2>Goals</h2>
+      <table border="1" cellpadding="6" cellspacing="0">
+        <tr>
+          <th>Area</th>
+          <th>Current level</th>
+          <th>Goal by end of semester</th>
+        </tr>
+        <tr>
+          <td>HTML &amp; CSS</td>
+          <td>Beginner</td>
+          <td>Build a full responsive personal site</td>
+        </tr>
+        <tr>
+          <td>JavaScript</td>
+          <td>Beginner</td>
+          <td>Make forms and nav interactive</td>
+        </tr>
+        <tr>
+          <td>Deployment</td>
+          <td>Good with AWS, not deployed yet</td>
+          <td>Deploy the finished site online</td>
+        </tr>
+      </table>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:idealpirnazarov@gmail.com">idealpirnazarov@gmail.com</a></p>
+      <form>
+        <label for="name">Name</label><br>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="email">Email</label><br>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="message">Message</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Adilbek. Built for IWaMAD, Week 01.</p>
+  </footer>
+
+</body>
+</html>
