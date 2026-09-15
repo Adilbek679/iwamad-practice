@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adilbek — Profile Card</title>
+  <link rel="stylesheet" href="/src/style.css">
+  <meta name="description" content="IWaMAD Week 2: a responsive, interactive profile card built with semantic HTML5, the CSS box model, Flexbox/Grid, vanilla JS, and Tailwind utilities.">
+
+  <!-- Step 2: Tailwind via CDN, no build step needed -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+
+  <header class="site-head flex items-center justify-between">
+    <span class="display text-sm tracking-wide">IWaMAD · Week 2</span>
+    <span class="text-sm opacity-70">Profile Card</span>
+  </header>
+
+  <main>
+    <!-- The card: semantic content lives here, styled with the box model above -->
+    <article class="card" id="profile-card">
+
+      <div class="identity-row">
+        <img
+          class="avatar"
+          src="https://picsum.photos/168/168"
+          alt="Adilbek's avatar placeholder photo"
+          width="84" height="84">
+        <div>
+          <h1 class="display text-2xl">Adilbek</h1>
+          <p class="text-sm opacity-70">Aspiring Web Developer</p>
+        </div>
+      </div>
+
+      <p class="bio">
+        My name is Adilbek. I'm a student with a background in cloud infrastructure (AWS), backend
+        development with Django REST Framework, and networking (Cisco). This
+        week I turned a static profile page into a responsive, interactive
+        card — real layout work, a bit of JavaScript, and my first pass at
+        Tailwind.
+      </p>
+
+      <div class="skills-grid">
+        <span class="skill">AWS</span>
+        <span class="skill">Django REST</span>
+        <span class="skill">Cisco networking</span>
+        <span class="skill">pandas</span>
+        <span class="skill">HTML5 / CSS</span>
+        <span class="skill">JavaScript</span>
+      </div>
+
+      <div class="link-row">
+        <a href="mailto:idealpirnazarov@gmail.com">Email</a>
+        <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+        <!-- Tailwind utility classes replace hand-written padding / rounding / spacing on this button -->
+        <button id="like-btn" class="px-4 py-2 rounded-md ml-auto" type="button" aria-pressed="false">
+          ♡ Like
+        </button>
+      </div>
+
+    </article>
+  </main>
+
+  <footer class="site-foot text-center text-sm opacity-60">
+    &copy; 2026 Adilbek. Built for IWaMAD, Week 02.
+  </footer>
+
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
