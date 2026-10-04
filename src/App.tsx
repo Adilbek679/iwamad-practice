@@ -1,35 +1,24 @@
-import Header from './components/Header'
-import Footer from './components/Footer'
-import ProfileCard from './components/ProfileCard'
+import { Routes, Route } from 'react-router'
+import Layout from './components/Layout'
+import HomePage from './pages/HomePage'
+import SkillsPage from './pages/SkillsPage'
+import ContactPage from './pages/ContactPage'
+import NotFoundPage from './pages/NotFoundPage'
 import './style.css'
 
 function App() {
   return (
-    <>
-      <Header title="IWaMAD · Week 3" subtitle="Profile Card" />
-
-      <main>
-        <ProfileCard
-          name="Adilbek"
-          role="Aspiring Web Developer"
-          avatarUrl="https://picsum.photos/168/168"
-          bio="Aspiring web developer interested in Python, Django, cloud computing, and modern web technologies."
-          email="idealpirnazarov@gmail.com"
-          githubUrl="https://github.com/Adilbek679"
-          skills={[
-            { id: 1, label: 'AWS' },
-            { id: 2, label: 'Django REST' },
-            { id: 3, label: 'Cisco networking' },
-            { id: 4, label: 'pandas' },
-            { id: 5, label: 'HTML5 / CSS' },
-            { id: 6, label: 'JavaScript' },
-          ]}
-        />
-      </main>
-
-      <Footer year={2026} author="Adilbek" />
-    </>
+    <Routes>
+      <Route element={<Layout />}>
+        <Route index element={<HomePage />} />
+        <Route path="skills" element={<SkillsPage />} />
+        <Route path="contact" element={<ContactPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Route>
+    </Routes>
   )
 }
+
+export default App
 
 export default App

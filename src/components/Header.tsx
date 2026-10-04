@@ -1,13 +1,23 @@
+import { NavLink } from 'react-router'
+import { useLikes } from '../context/LikesContext'
+
 type HeaderProps = {
   title: string;
-  subtitle: string;
 };
 
-function Header({ title, subtitle }: HeaderProps) {
+function Header({ title }: HeaderProps) {
+  const { likes } = useLikes()
+
   return (
     <header className="site-head flex items-center justify-between">
       <span className="display text-sm tracking-wide">{title}</span>
-      <span className="text-sm opacity-70">{subtitle}</span>
+
+      <nav className="main-nav text-sm">
+        <NavLink to="/" end>Home</NavLink>
+        <NavLink to="/skills">Skills</NavLink>
+        <NavLink to="/contact">Contact</NavLink>
+        <span className="header-likes">♥ {likes}</span>
+      </nav>
     </header>
   );
 }
