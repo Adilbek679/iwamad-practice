@@ -113,3 +113,34 @@ main {
   border-color: #c98a3b;
   color: #0f1b2b;
 }
+/* navigation in the header */
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.main-nav a {
+  color: #0f1b2b;
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+}
+
+.main-nav a:hover {
+  border-bottom-color: #3aafa9;
+}
+
+/* the link of the page we are on right now */
+.main-nav a.active {
+  font-weight: bold;
+  border-bottom-color: #c98a3b;
+}
+
+.header-likes {
+  color: #c98a3b;
+}
+
+section.card h1 {
+  margin: 0 0 1rem 0;
+}
