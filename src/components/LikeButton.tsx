@@ -1,17 +1,20 @@
 import { useLikes } from '../context/LikesContext'
+import Button from './ui/Button'
 
 function LikeButton() {
   const { likes, addLike } = useLikes()
+  const label = likes === 0 ? 'Like' : `Like (${likes} ${likes === 1 ? 'like' : 'likes'})`
 
   return (
-    <button
+    <Button
       id="like-btn"
-      className={`px-4 py-2 rounded-md ml-auto ${likes > 0 ? 'is-liked' : ''}`}
-      type="button"
+      variant={likes > 0 ? 'primary' : 'secondary'}
+      className="ml-auto"
+      aria-label={label}
       onClick={addLike}
     >
       {likes === 0 ? '♡ Like' : `♥ ${likes}`}
-    </button>
+    </Button>
   )
 }
 

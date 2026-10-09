@@ -5,8 +5,8 @@ type FooterProps = {
 
 function Footer({ year, author }: FooterProps) {
   return (
-    <footer className="site-foot text-center text-sm opacity-60">
-      &copy; {year} {author}. Built for IWaMAD, Week 04.
+    <footer className="site-foot text-center text-sm text-muted">
+      &copy; {year} {author}. Built for IWaMAD, Week 05.
     </footer>
   );
 }

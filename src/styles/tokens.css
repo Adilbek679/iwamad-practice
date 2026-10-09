@@ -1,0 +1,16 @@
+/* Design tokens from Figma (collection "SIS 2"). Figma "a/b" -> CSS "--a-b". */
+:root {
+  --color-primary: #1d4ed8;
+  --color-on-primary: #ffffff;
+  --color-text: #1f2937;
+  /* Figma value was #9ca3af (2.54 : 1 on white) — darkened to pass 4.5 : 1 */
+  --color-text-muted: #5b6472;
+  --color-surface: #ffffff;
+  --color-border: #d1d5db;
+
+  --space-2: 8px;
+  --space-4: 16px;
+  --space-6: 24px;
+
+  --radius-md: 8px;
+}

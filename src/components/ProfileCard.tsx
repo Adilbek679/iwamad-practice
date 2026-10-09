@@ -1,5 +1,6 @@
 import SkillBadge, { type Skill } from './SkillBadge'
 import LikeButton from './LikeButton'
+import Card from './ui/Card'
 
 type ProfileCardProps = {
   name: string
@@ -21,7 +22,7 @@ function ProfileCard({
   skills,
 }: ProfileCardProps) {
   return (
-    <article className="card" id="profile-card">
+    <Card id="profile-card">
       <div className="identity-row">
         <img
           className="avatar"
@@ -33,7 +34,7 @@ function ProfileCard({
 
         <div>
           <h1 className="display text-2xl">{name}</h1>
-          <p className="text-sm opacity-70">{role}</p>
+          <p className="text-sm text-muted">{role}</p>
         </div>
       </div>
 
@@ -41,7 +42,7 @@ function ProfileCard({
 
       <div className="skills-grid">
         {skills.length === 0 ? (
-          <p className="text-sm opacity-70">No skills added yet.</p>
+          <p className="text-sm text-muted">No skills added yet.</p>
         ) : (
           skills.map(skill => (
             <SkillBadge key={skill.id} skill={skill} />
@@ -58,7 +59,7 @@ function ProfileCard({
 
         <LikeButton />
       </div>
-    </article>
+    </Card>
   )
 }
 
